@@ -3,7 +3,7 @@ package com.nikhil.ems.model.entity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import java.util.HashSet;
 import java.util.Set;
@@ -14,7 +14,7 @@ import lombok.Setter;
 @Table(name = "designations")
 @Getter
 @Setter
-public class Designation extends Root{
+public class Role extends Root{
 
   @Column(name = "name", nullable = false, unique = true)
   private String name;
@@ -22,6 +22,6 @@ public class Designation extends Root{
   @Column(name = "description")
   private String description;
 
-  @OneToMany(mappedBy = "designation", fetch = FetchType.LAZY)
+  @ManyToMany(mappedBy = "roles", fetch = FetchType.LAZY)
   private Set<Employee> employees = new HashSet<>();
 }

@@ -10,7 +10,7 @@ public class EmployeeService {
 
   private final EmployeeRepository employeeRepository;
   private final DepartmentService departmentService;
-  private final DesignationService designationService;
+  private final RoleService roleService;
 
 
 }

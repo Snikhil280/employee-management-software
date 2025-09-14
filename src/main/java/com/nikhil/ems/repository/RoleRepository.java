@@ -1,10 +1,10 @@
 package com.nikhil.ems.repository;
 
-import com.nikhil.ems.model.entity.Designation;
+import com.nikhil.ems.model.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface DesignationRepository extends JpaRepository<Designation, Integer> {
+public interface RoleRepository extends JpaRepository<Role, Integer> {
 
 }
